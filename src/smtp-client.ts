@@ -6,6 +6,7 @@ export interface SMTPConfig {
   secure?: boolean;
   username: string;
   password: string;
+  fromName?: string;
 }
 
 export interface EmailOptions {
@@ -64,8 +65,12 @@ export class SMTPClient {
       throw new Error('SMTP client not connected');
     }
 
+    const defaultFrom = this.config.fromName
+      ? `${this.config.fromName} <${this.config.username}>`
+      : this.config.username;
+
     const mailOptions = {
-      from: options.from || this.config.username,
+      from: options.from || defaultFrom,
       to: Array.isArray(options.to) ? options.to.join(', ') : options.to,
       cc: options.cc ? (Array.isArray(options.cc) ? options.cc.join(', ') : options.cc) : undefined,
       bcc: options.bcc ? (Array.isArray(options.bcc) ? options.bcc.join(', ') : options.bcc) : undefined,

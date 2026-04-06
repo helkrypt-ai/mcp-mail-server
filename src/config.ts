@@ -48,6 +48,7 @@ export const EMAIL_CONFIG = {
     port: getRequiredNumberEnvVar('SMTP_PORT'),
     username: getRequiredEnvVar('EMAIL_USER'),
     password: getRequiredEnvVar('EMAIL_PASS'),
-    secure: getRequiredBooleanEnvVar('SMTP_SECURE')
+    secure: getRequiredBooleanEnvVar('SMTP_SECURE'),
+    fromName: getRequiredEnvVar('FROM_NAME', '')
   }
 };

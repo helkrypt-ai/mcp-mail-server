@@ -1,6 +1,6 @@
 {
   "name": "mcp-mail-server",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "MCP server for IMAP/SMTP email access with environment-based configuration",
   "main": "dist/index.js",
   "type": "module",
@@ -32,15 +32,15 @@
     "claude",
     "model-context-protocol"
   ],
-  "author": "zhuyunfei",
+  "author": "Helkrypt AI",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yunfeizhu/mcp-mail-server.git"
+    "url": "git+https://github.com/helkrypt-ai/mcp-mail-server.git"
   },
-  "homepage": "https://github.com/yunfeizhu/mcp-mail-server#readme",
+  "homepage": "https://github.com/helkrypt-ai/mcp-mail-server#readme",
   "bugs": {
-    "url": "https://github.com/yunfeizhu/mcp-mail-server/issues"
+    "url": "https://github.com/helkrypt-ai/mcp-mail-server/issues"
   },
   "engines": {
     "node": ">=18.0.0"
